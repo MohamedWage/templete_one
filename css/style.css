@@ -429,6 +429,7 @@ body {
     float: left;
     text-align: center;
     padding: 32px 0;
+    position: relative;
 }
 .pricing-item-header {
     text-transform: uppercase;
@@ -465,6 +466,19 @@ body {
     display: block;
     width: 120px;
     margin-top: 15px;
+}
+.pricing-item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(5, 5, 5, 0.5);
+}
+.pricing-item:hover::after{
+    height: 100%;
+    transition: .5s;
 }
 .test {
     position: relative;
